@@ -13,7 +13,11 @@ public class P10250 {
 			int b = sc.nextInt();
 			int c = sc.nextInt();
 			int d = sc.nextInt();
-			array[i] = 100 * (d % b) + ((d / b) + 1);
+			if(d % b == 0) {
+				array[i] = b * 100 + (d / b);
+			}else {
+				array[i] = 100 * (d % b) + ((d / b) + 1);
+			}
 		}
 		for(int j = 0; j < a; j++) {
 			System.out.println(array[j]);
